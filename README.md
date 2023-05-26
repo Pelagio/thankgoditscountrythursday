@@ -1,1 +1,1 @@
-Thank god it's country Thursday
+Thank god it's country Thursday.
