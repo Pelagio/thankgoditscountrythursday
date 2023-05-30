@@ -1,10 +1,14 @@
 import "./App.css";
+import CountryThursday from "./assets/country_thursday.png";
 import { SpotifyPlaylist } from "./SpotifyPlaylist";
 import { SpotifyTrack } from "./SpotifyTrack";
 
 function App() {
-  return (
+  const today = new Date();
+  const isThursday = today.getDay() === 4;
+  return isThursday ? (
     <>
+      <img src={CountryThursday} />
       <h1>Life Goes On - Ed Sheeran feat. Luke Combs</h1>
       <SpotifyTrack trackId="3pX6S200JUrqrqbTxvYnRa" />
       <p>
@@ -43,6 +47,10 @@ function App() {
       </p>
       <h2>Spotify Radio</h2>
       <SpotifyPlaylist playListId="37i9dQZF1E8Ny8TcvHlSGe" darkTheme compact />
+    </>
+  ) : (
+    <>
+      <h1>Not Thursday</h1>
     </>
   );
 }
