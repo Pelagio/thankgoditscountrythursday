@@ -5,7 +5,7 @@ import { SpotifyTrack } from "./SpotifyTrack";
 
 function App() {
   const today = new Date();
-  const isThursday = today.getDay() === 4;
+  const isThursday = today.getDay() === 2;
   return isThursday ? (
     <>
       <img src={CountryThursday} />
