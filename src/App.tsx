@@ -7,7 +7,7 @@ function App() {
   const today = new Date();
   const numberOfDaysToThursday =
     4 - today.getDay() > 0 ? 4 - today.getDay() : 11 - today.getDay();
-  const isThursday = today.getDay() === 4;
+  const isThursday = today.getDay() === 3;
   return isThursday ? (
     <div className="container">
       <img src={CountryThursday} width={"100%"} />
