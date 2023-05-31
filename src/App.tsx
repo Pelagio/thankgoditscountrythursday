@@ -5,7 +5,9 @@ import { SpotifyTrack } from "./SpotifyTrack";
 
 function App() {
   const today = new Date();
-  const isThursday = today.getDay() === 3;
+  const numberOfDaysToThursday =
+    4 - today.getDay() > 0 ? 4 - today.getDay() : 11 - today.getDay();
+  const isThursday = today.getDay() === 4;
   return isThursday ? (
     <div className="container">
       <img src={CountryThursday} width={"100%"} />
@@ -53,6 +55,11 @@ function App() {
   ) : (
     <div className="container">
       <h1>Not Thursday</h1>
+      <p>
+        ... but don't worry it's only {numberOfDaysToThursday}{" "}
+        {numberOfDaysToThursday === 1 ? "day" : "days"} to Thursday!
+      </p>
+      <p>Come back then and enjoy!</p>
     </div>
   );
 }
