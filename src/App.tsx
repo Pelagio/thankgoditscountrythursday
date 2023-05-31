@@ -6,13 +6,12 @@ function App() {
   const today = new Date();
   const numberOfDaysToThursday =
     4 - today.getDay() > 0 ? 4 - today.getDay() : 11 - today.getDay();
-  const isThursday = today.getDay() === 3;
+  const isThursday = today.getDay() === 4;
   return isThursday ? (
     <div className="container">
       <img className="logo" src={CountryThursday} />
       {/* <h1>Thinking 'Bout You (feat. MacKenzie)- Dustin Lynch</h1> */}
       <SpotifyTrack trackId="4wBjKhJx6JnGoNJfJs24pd" />
-      {/* expand to display text*/}
       <h2>Review</h2>
       <p>
         Dustin Lynch's collaboration with MacKenzie in the track "Thinking 'Bout
