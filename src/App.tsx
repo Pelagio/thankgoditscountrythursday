@@ -5,12 +5,14 @@ import { SpotifyTrack } from "./SpotifyTrack";
 
 function App() {
   const today = new Date();
-  const isThursday = today.getDay() === 2;
+  const isThursday = today.getDay() === 3;
   return isThursday ? (
-    <>
-      <img src={CountryThursday} />
+    <div className="container">
+      <img src={CountryThursday} width={"100%"} />
       <h1>Life Goes On - Ed Sheeran feat. Luke Combs</h1>
       <SpotifyTrack trackId="3pX6S200JUrqrqbTxvYnRa" />
+      {/* expand to display text*/}
+      <h2>Review</h2>
       <p>
         "Life Goes On" is a mesmerizing collaboration between two exceptional
         artists, Ed Sheeran and Luke Combs. The song seamlessly merges their
@@ -47,11 +49,11 @@ function App() {
       </p>
       <h2>Spotify Radio</h2>
       <SpotifyPlaylist playListId="37i9dQZF1E8Ny8TcvHlSGe" darkTheme compact />
-    </>
+    </div>
   ) : (
-    <>
+    <div className="container">
       <h1>Not Thursday</h1>
-    </>
+    </div>
   );
 }
 
