@@ -49,7 +49,9 @@ function App() {
         timeless message and beautiful composition make it a standout track,
         destined to resonate with audiences for years to come.
       </p>
-      <h2>Spotify Radio</h2>
+      <h2>Playlist of the week</h2>
+      <p>Based on this week's review, we have populated a playlist for you.</p>
+      <p>Enjoy!</p>
       <SpotifyPlaylist playListId="37i9dQZF1E8Ny8TcvHlSGe" darkTheme compact />
     </div>
   ) : (
