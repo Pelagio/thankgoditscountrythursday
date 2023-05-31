@@ -2,7 +2,6 @@ import "./App.css";
 import CountryThursday from "./assets/country_thursday.png";
 import { SpotifyPlaylist } from "./SpotifyPlaylist";
 import { SpotifyTrack } from "./SpotifyTrack";
-
 function App() {
   const today = new Date();
   const numberOfDaysToThursday =
@@ -10,49 +9,50 @@ function App() {
   const isThursday = today.getDay() === 3;
   return isThursday ? (
     <div className="container">
-      <img src={CountryThursday} width={"100%"} />
-      <h1>Life Goes On - Ed Sheeran feat. Luke Combs</h1>
-      <SpotifyTrack trackId="3pX6S200JUrqrqbTxvYnRa" />
+      <img className="logo" src={CountryThursday} />
+      {/* <h1>Thinking 'Bout You (feat. MacKenzie)- Dustin Lynch</h1> */}
+      <SpotifyTrack trackId="4wBjKhJx6JnGoNJfJs24pd" />
       {/* expand to display text*/}
       <h2>Review</h2>
       <p>
-        "Life Goes On" is a mesmerizing collaboration between two exceptional
-        artists, Ed Sheeran and Luke Combs. The song seamlessly merges their
-        unique musical styles, creating a poignant and uplifting anthem that
-        resonates with listeners.
-        <br />
-        <br />
-        Ed Sheeran's heartfelt and introspective songwriting shines through as
-        he navigates the complexities of life's ups and downs. His smooth vocals
-        deliver the lyrics with sincerity and vulnerability, capturing the
-        essence of human emotions and experiences. Luke Combs, known for his
-        powerful country vocals, adds an additional layer of depth to the track,
-        enhancing its emotional impact.
-        <br />
-        <br />
-        The lyrics of "Life Goes On" offer a comforting reminder that no matter
-        the hardships we face, life continues to progress. It acknowledges the
-        pain and struggles we encounter but encourages resilience and hope. The
-        melody is melodic and soothing, allowing the listener to immerse
-        themselves in the heartfelt storytelling.
-        <br />
-        <br />
-        The chemistry between Sheeran and Combs is evident, their voices
-        blending harmoniously and complementing each other perfectly. The
-        instrumentation, ranging from acoustic guitar to subtle yet effective
-        production elements, creates a warm and inviting musical backdrop for
-        their vocals.
-        <br />
-        <br />
-        Overall, "Life Goes On" is a captivating and relatable song that
-        showcases the immense talent of both Ed Sheeran and Luke Combs. Its
-        timeless message and beautiful composition make it a standout track,
-        destined to resonate with audiences for years to come.
+        Dustin Lynch's collaboration with MacKenzie in the track "Thinking 'Bout
+        You" is a refreshing addition to the country music scene. With its
+        heartfelt lyrics and catchy melodies, this song showcases Lynch's growth
+        as an artist and his ability to create an emotional connection with his
+        audience.
+      </p>
+      <p>
+        The chemistry between Lynch and MacKenzie is evident from the first
+        note. Their voices blend effortlessly, creating a harmonious duet that
+        is both captivating and soul-stirring. The raw emotions conveyed in
+        their delivery make it easy for listeners to relate to the longing and
+        nostalgia expressed in the lyrics.
+      </p>
+      <p>
+        The production of "Thinking 'Bout You" is polished and well-crafted,
+        with a perfect balance between traditional country elements and modern
+        sensibilities. The instrumentation, including the twangy guitars and
+        subtle use of synths, adds depth to the song without overpowering the
+        vocals.
+      </p>
+      <p>
+        Lyrically, the song explores the bittersweet experience of reminiscing
+        about a past love. The storytelling is honest and evocative, painting a
+        vivid picture of the protagonist grappling with the memories that haunt
+        them. The chorus, with its infectious melody, is an instant earworm that
+        lingers in your mind long after the song has ended.
+      </p>
+      <p>
+        "Thinking 'Bout You" is a standout track that showcases Dustin Lynch's
+        artistic growth and his ability to deliver an emotionally resonant
+        performance. With its captivating vocals, compelling lyrics, and
+        memorable melodies, this collaboration is a testament to the enduring
+        power of country music.
       </p>
       <h2>Playlist of the week</h2>
       <p>Based on this week's review, we have populated a playlist for you.</p>
       <p>Enjoy!</p>
-      <SpotifyPlaylist playListId="37i9dQZF1E8Ny8TcvHlSGe" darkTheme compact />
+      <SpotifyPlaylist playListId="37i9dQZF1E8NJ812DhgupL" darkTheme compact />
     </div>
   ) : (
     <div className="container">
