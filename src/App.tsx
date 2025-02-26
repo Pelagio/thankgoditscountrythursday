@@ -34,19 +34,23 @@ function App() {
   return isThursday ? (
     <div className="container">
       <img className="logo" src={CountryThursday} />
-      {review.trackId && <SpotifyTrack trackId={review.trackId} />}
-      <h2>Review</h2>
-      <p>{review.review1}</p>
-      <p>{review.review2}</p>
-      <p>{review.review3}</p>
-      <p>{review.review4}</p>
-      {review.review5.length > 0 && <p>{review.review5}</p>}
-      <h2>Playlist of the week</h2>
-      <p>Based on this week's review, we have populated a playlist for you.</p>
-      <p>Enjoy!</p>
-      {review.playlistId && (
-        <SpotifyPlaylist playListId={review.playlistId} darkTheme compact />
-      )}
+      <div className="content">
+        {review.trackId && <SpotifyTrack trackId={review.trackId} />}
+        <h2>Review</h2>
+        <p>{review.review1}</p>
+        <p>{review.review2}</p>
+        <p>{review.review3}</p>
+        <p>{review.review4}</p>
+        {review.review5.length > 0 && <p>{review.review5}</p>}
+        <h2>Playlist of the week</h2>
+        <p>
+          Based on this week's review, we have populated a playlist for you.
+        </p>
+        <p>Enjoy!</p>
+        {review.playlistId && (
+          <SpotifyPlaylist playListId={review.playlistId} darkTheme compact />
+        )}
+      </div>
     </div>
   ) : (
     <div className="container">
